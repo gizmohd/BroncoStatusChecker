@@ -17,7 +17,7 @@ namespace BroncoStatusChecker
 
         static void Main(string[] args)
         {
-            Parser.Default.ParseArguments<Options>(args).WithParsed<Options>(o =>
+            Parser.Default.ParseArguments<Options>(args).WithParsed(o =>
             {
                 if (!string.IsNullOrWhiteSpace(o.TwilioAuthToken) && !string.IsNullOrWhiteSpace(o.TwilioSID))
                 {
